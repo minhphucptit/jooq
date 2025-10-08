@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+    <jdbc>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3307/jooq</url>
+        <user>root</user>
+        <password>Welcome1</password>
+    </jdbc>
+
+    <generator>
+        <database>
+            <name>org.jooq.meta.mysql.MySQLDatabase</name>
+            <inputSchema>jooq</inputSchema>
+
+            <recordTimestampFields>
+                <recordTimestampField>updated_at</recordTimestampField>
+            </recordTimestampFields>
+        </database>
+        <target>
+            <packageName>com.nathan.jooq.generated</packageName>
+            <directory>src/main/java</directory>
+        </target>
+    </generator>
+</configuration>
